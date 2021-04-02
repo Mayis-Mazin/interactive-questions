@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+
 @Component({
   selector: 'app-create-question',
   templateUrl: './create-question.component.html',
@@ -32,9 +33,10 @@ export class CreateQuestionComponent implements OnInit {
     // get values
     let qusetion = this.qGeneratorForm.get('question').value;
     // get answers
-    let answers = qusetion.match(/\(.+?\)/g);
+    let answers = qusetion.match(/\*.+?\*/g);
+
     // create blank
-    let input = this.qGeneratorForm.get('question').value.replace(/\(.+?\)/g, '<input type="text" class="form-control js-question-generator" style="width: 100px !important; display: inline; margin=0 5px" />');
+    let input = this.qGeneratorForm.get('question').value.replace(/\*.+?\*/g, '<input type="text" class="form-control js-question-generator" style="width: 100px !important; display: inline; margin=0 5px" />');
 
     // save values
     this.qusetions[0].title = this.qGeneratorForm.get('title').value;

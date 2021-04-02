@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "q-a-generator": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "q-a-generator"
+    }
+  },
+  "defaultProject": "q-a-generator",
+  "cli": {
+    "analytics": "227cfe96-785b-40cb-8928-3107a701657c"
+  }
 }
